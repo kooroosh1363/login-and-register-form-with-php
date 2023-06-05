@@ -1,1 +1,36 @@
-// 
+// import font google
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800&family=Noto+Sans:ital,wght@1,900&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@1,900&display=swap');
+
+*{
+    font-family: 'Playfair Display', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+   --pri_color:rgb(130, 148, 196);
+   --sec_color:rgb(172, 177, 214);
+   --black_color:rgb(39, 55, 77);
+   --fail_color: rgb(255, 0, 0);
+   --success_color: rgb(219, 223, 234);
+   --input_color: rgb(255, 234, 210);
+   --border_color: rgb(82, 109, 130);
+}
+
+
+
+html{
+    font-size: 90%;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
