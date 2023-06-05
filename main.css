@@ -28,6 +28,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url(./assets/image/square.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body .container_form {
   width: 300px;
@@ -74,10 +78,49 @@ body .container_form .row {
   gap: 1rem;
   z-index: 1000;
   transform: translateY(-1rem);
-  padding-bottom: 1rem;
+  padding-bottom: 0.1rem;
 }
 body .container_form .row label {
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 1px;
   font-size: 15px;
+}
+body .container_form .row input {
+  width: 100%;
+  background: var(--input_color);
+  outline: none;
+  border: none;
+  color: var(--black_color);
+  padding: 0.3rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+body .container_form .row ::-moz-placeholder {
+  font-size: 15px;
+}
+body .container_form .row ::placeholder {
+  font-size: 15px;
+}
+body .container_form .row #sub_btn {
+  background: var(--black_color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+body .container_form .row #sub_btn:hover {
+  background: rgb(145, 144, 150);
+  transition: 0.1s;
+  color: var(--black_color);
+}
+body .container_form .row .linkRegister {
+  display: block;
+  font-size: 15px;
+  color: var(--black_color);
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+body .container_form .row .linkRegister a {
+  text-decoration: none;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

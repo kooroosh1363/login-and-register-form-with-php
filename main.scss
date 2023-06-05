@@ -33,6 +33,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url(./assets/image/square.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .container_form {
         width: 300px;
@@ -82,14 +86,47 @@ body {
             gap: 1rem;
             z-index: 1000;
             transform: translateY(-1rem);
-            padding-bottom: 1rem;
+            padding-bottom: 0.1rem;
             label{
                 display: block;
-                padding-bottom: 10px;
+                padding-bottom: 1px;
                 font-size: 15px;
             }
             input{
-                
+                width: 100%;
+                background: var(--input_color);
+                outline: none;
+                border: none;
+                color: var(--black_color);
+                padding: 0.3rem;
+                font-weight: 500;
+                border-radius: 5px;
+            }
+            ::placeholder{
+                font-size: 15px;
+            }
+            #sub_btn{
+                background: var(--black_color);
+                color: #fff;
+                cursor: pointer;
+                border-radius: 5px;
+                &:hover{
+                    background: rgb(145, 144, 150);
+                    transition: 0.1s;
+                    color: var(--black_color);
+                }
+            }
+            .linkRegister{
+                display: block;
+                font-size: 15px;
+                color: var(--black_color);
+                text-align: center;
+                font-weight: 400;
+                margin-top: 1rem;
+                a{
+                    text-decoration: none;
+                    cursor: pointer;
+                }
             }
         }
 
