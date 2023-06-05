@@ -7,9 +7,9 @@
 }
 
 :root {
-  --pri_color:rgb(130, 148, 196);
-  --sec_color:rgb(172, 177, 214);
-  --black_color:rgb(39, 55, 77);
+  --pri_color: rgb(130, 148, 196);
+  --sec_color: rgb(172, 177, 214);
+  --black_color: rgb(39, 55, 77);
   --fail_color: rgb(255, 0, 0);
   --success_color: rgb(219, 223, 234);
   --input_color: rgb(255, 234, 210);
@@ -27,5 +27,57 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+}
+body .container_form {
+  width: 300px;
+  height: 450px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid rgb(234, 234, 234);
+  background: var(--pri_color);
+  overflow: hidden;
+  z-index: 1;
+}
+body .container_form .overlay {
+  position: absolute;
+  background: var(--sec_color);
+  content: "";
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  z-index: 2;
+  top: -20%;
+}
+body .container_form .divTitle {
+  position: relative;
+  width: 100%;
+  margin: 10px auto 5px;
+  text-align: center;
+  transform: translateY(-3rem);
+  z-index: 1000;
+}
+body .container_form .divTitle .title {
+  color: var(--black_color);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+body .container_form .row {
+  display: grid;
+  position: relative;
+  gap: 1rem;
+  z-index: 1000;
+  transform: translateY(-1rem);
+  padding-bottom: 1rem;
+}
+body .container_form .row label {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 15px;
 }/*# sourceMappingURL=main.css.map */
