@@ -130,7 +130,7 @@ body .container_form .row .linkRegister a {
 }
 .dashboard h1 {
   margin: 1rem 0;
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--pri_color);
 }
 .dashboard .btnLogOut {
@@ -146,4 +146,10 @@ body .container_form .row .linkRegister a {
   background: var(--sec_color);
   border-radius: 5px;
   text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .dashboard h1 {
+    font-size: 5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

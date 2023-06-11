@@ -155,7 +155,7 @@ body {
 
     h1 {
         margin: 1rem 0;
-        font-size: 5rem;
+        font-size: 3rem;
         color: var(--pri_color);
     }
 
@@ -174,4 +174,13 @@ body {
             text-decoration: none;
         }
     }
+}
+
+@media screen and (min-width:480px) {
+    .dashboard{
+        h1{
+            font-size: 5rem;
+        }
+    }
+    
 }
