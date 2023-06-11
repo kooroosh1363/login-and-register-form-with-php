@@ -123,4 +123,27 @@ body .container_form .row .linkRegister {
 body .container_form .row .linkRegister a {
   text-decoration: none;
   cursor: pointer;
+}
+
+.dashboard {
+  text-align: center;
+}
+.dashboard h1 {
+  margin: 1rem 0;
+  font-size: 5rem;
+  color: var(--pri_color);
+}
+.dashboard .btnLogOut {
+  cursor: pointer;
+}
+.dashboard .btnLogOut:hover a {
+  background: var(--sec_color);
+  color: var(--black_color);
+}
+.dashboard .btnLogOut a {
+  padding: 10px 20px;
+  color: #fff;
+  background: var(--sec_color);
+  border-radius: 5px;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

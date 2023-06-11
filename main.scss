@@ -138,6 +138,7 @@ body {
             }
         }
     }
+
     // .container_register{
     //     height: 580px;
     //     .overlay{
@@ -148,6 +149,29 @@ body {
 }
 
 
+// dashboard scss design
+.dashboard {
+    text-align: center;
 
+    h1 {
+        margin: 1rem 0;
+        font-size: 5rem;
+        color: var(--pri_color);
+    }
 
+    .btnLogOut {
+        cursor: pointer;
 
+        &:hover a {
+            background: var(--sec_color);
+            color: var(--black_color);
+        }
+        a{
+            padding: 10px 20px;
+            color: #fff;
+            background: var(--sec_color);
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    }
+}
