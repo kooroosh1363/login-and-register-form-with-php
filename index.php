@@ -31,7 +31,7 @@ include("./partials/header.php")
             <div class="row">
                 <input type="submit" id="sub_btn" name="submit" value="LOGIN">
 
-                <span class="linkRegister">Don't Have An Account?<a href="./register.html">Register</a></span>
+                <span class="linkRegister">Don't Have An Account?<a href="./register.php">Register</a></span>
             </div>
         </div>
     </form>
