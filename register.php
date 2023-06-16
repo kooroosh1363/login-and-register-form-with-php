@@ -57,22 +57,23 @@ include('./partials/footer.php');
 
 
 <!-- we must let register new accountin db and later login with same account -->
-<?php 
+<?php
 
 if (isset($_POST['submit'])) {
-    $username =$_POST['username'];
-    $email =$_POST['email'];
-    $password =$_POST['password'];
-    $phone =$_POST['phone'];
-    
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+
 
 
     // query codes to db
     $sql = "INSERT INTO admin SET 
-          username = '$username', 
-          email = '$email', 
-          password ='$password', 
-          phone='$phone'
+            username = '$username', 
+            email = '$email', 
+            phone ='$phone', 
+            password = '$password'
+            
     ";
 
     // query codes execute
@@ -80,14 +81,13 @@ if (isset($_POST['submit'])) {
     // if for check in query 
     if ($res == true) {
         // mess for account successfully
-        $_SESSION['createdAccount'] = '<span class="add">Account '.$username.' Created!</span>';
-        header('location:'.SITEURL.'index.php');
+        $_SESSION['createdAccount'] = '<span class="add">Account ' . $username . ' Created!</span>';
+        header('location:' . SITEURL . 'index.php');
         exit();
-    }
-    else{
+    } else {
         // mess for account failed in created
-        $_SESSION['unSucc'] = '<span class="fail">Account '.$username.' failed!</span>';
-        header('location:'.SITEURL.'register.php');
+        $_SESSION['unSucc'] = '<span class="fail">Account ' . $username . ' failed!</span>';
+        header('location:' . SITEURL . 'register.php');
         exit();
     }
 }
