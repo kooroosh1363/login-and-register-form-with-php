@@ -28,10 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(./assets/image/square.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #fff !important;
 }
 body .container_form {
   width: 300px;
@@ -148,12 +145,17 @@ body .container_form .row .linkRegister a {
   text-decoration: none;
 }
 
-.succ {
+.succ .add {
   padding: 10px 20px;
   text-align: center;
   background: var(--success_color);
   color: var(--black_color);
   margin-bottom: 1rem;
+}
+
+.add {
+  margin: 0;
+  transform: translateY(100px);
 }
 
 .fail {

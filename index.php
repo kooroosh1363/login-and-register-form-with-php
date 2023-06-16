@@ -3,7 +3,14 @@ include("./partials/header.php")
 
 ?>
 
+<?php 
 
+if (isset($_SESSION['createdAccount'])) {
+    echo $_SESSION['createdAccount'];
+    unset($_SESSION['createdAccount']);
+}
+
+?>
 
 <div class="container_form">
     <div class="overlay">
@@ -13,6 +20,14 @@ include("./partials/header.php")
         <h1 class="title">LOGIN</h1>
         <span class="subTitle">WELCOME BACK</span>
     </div>
+    <?php
+
+    if (isset($_SESSION['notAdmin'])) {
+        echo $_SESSION['notAdmin'];
+        unset($_SESSION['notAdmin']);
+    }
+
+    ?>
 
     <!-- section form -->
     <form action="" method="POST">
@@ -46,37 +61,35 @@ include("./partials/footer.php")
 
 
 <!-- login to database -->
-<?php 
-if(isset($_POST['submit'])){
+<?php
+if (isset($_POST['submit'])) {
     // echo "everything is ok";
     // create var for store
-    $username =$_POST['username'];
-    $password =$_POST['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
 
     // write sql codes for details in db
     $sql = "SELECT * from admin WHERE username='$username' AND password='$password'";
     // query code for execute
-    $result=mysqli_query($conn,$sql);
+    $result = mysqli_query($conn, $sql);
 
     // same count number of account in db
-    $count=mysqli_num_rows($result);
+    $count = mysqli_num_rows($result);
     // everything is results in array
-    $row=mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);
 
     // if for checking last account in db 
-    if($count ==1){
+    if ($count == 1) {
         // sent a message for new account
-        $_SESSION['loginMessage']='<span class="succ">welcome'.$username.'</span>';
-        header('location:'.SITEURL.'dashboard.php');
+        $_SESSION['loginMessage'] = '<span class="succ">welcome' . $username . '</span>';
+        header('location:' . SITEURL . 'dashboard.php');
         exit();
-    }
-    else{
+    } else {
         // sent a message if is not account in db
-        $_SESSION['notAdmin']='<span class="fail">welcome'.$username.'is not registered yet!</span>';
-        header('location:'.SITEURL.'index.php');
+        $_SESSION['notAdmin'] = '<span class="fail">welcome' . $username . 'is not registered yet!</span>';
+        header('location:' . SITEURL . 'index.php');
         exit();
-
     }
 }
 

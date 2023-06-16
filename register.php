@@ -13,7 +13,7 @@ include('./partials/header.php');
     </div>
 
     <!-- section form -->
-    <form action="" method="">
+    <form action="#" method="POST">
         <div class="row grid">
 
             <!-- username -->
@@ -52,5 +52,44 @@ include('./partials/header.php');
 <?php
 
 include('./partials/footer.php');
+
+?>
+
+
+<!-- we must let register new accountin db and later login with same account -->
+<?php
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+
+
+
+    // query codes to db
+    $sql = "INSERT INTO admin SET 
+            username = '$username', 
+            email = '$email', 
+            phone ='$phone', 
+            password = '$password'
+            
+    ";
+
+    // query codes execute
+    $res = mysqli_query($conn, $sql);
+    // if for check in query 
+    if ($res == true) {
+        // mess for account successfully
+        $_SESSION['createdAccount'] = '<span class="add">Account ' . $username . ' Created!</span>';
+        header('location:' . SITEURL . 'index.php');
+        exit();
+    } else {
+        // mess for account failed in created
+        $_SESSION['unSucc'] = '<span class="fail">Account ' . $username . ' failed!</span>';
+        header('location:' . SITEURL . 'register.php');
+        exit();
+    }
+}
 
 ?>
