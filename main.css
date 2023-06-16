@@ -28,7 +28,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #fff !important;
+  background-image: url(./assets/image/square.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body .container_form {
   width: 300px;
