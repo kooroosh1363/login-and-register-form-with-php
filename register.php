@@ -54,3 +54,23 @@ include('./partials/header.php');
 include('./partials/footer.php');
 
 ?>
+
+
+<!-- we must let register new accountin db and later login with same account -->
+<?php 
+
+if (isset($_POST['submit'])) {
+    $username =$_POST['username'];
+    $email =$_POST['email'];
+    $phone =$_POST['phone'];
+    $password =$_POST['password'];
+
+
+    // query codes to db
+    $sql='INSERT INTO admin SET username="$username", email="$email", password="$password", phone="$phone"';
+
+    // query codes execute
+    $result=
+}
+
+?>

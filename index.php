@@ -13,6 +13,14 @@ include("./partials/header.php")
         <h1 class="title">LOGIN</h1>
         <span class="subTitle">WELCOME BACK</span>
     </div>
+    <?php 
+    
+    if (isset($_SESSION['notAdmin'])) {
+        echo $_SESSION['notAdmin'];
+        unset($_SESSION['notAdmin']);
+    }
+    
+    ?>
 
     <!-- section form -->
     <form action="" method="POST">
