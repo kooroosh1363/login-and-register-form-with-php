@@ -15,7 +15,7 @@ include("./partials/header.php")
     </div>
 
     <!-- section form -->
-    <form action="" method="">
+    <form action="" method="POST">
         <div class="row grid">
             <!-- username -->
             <div class="row">
@@ -40,5 +40,15 @@ include("./partials/header.php")
 
 <?php
 include("./partials/footer.php")
+
+?>
+
+
+
+<!-- login to database -->
+<?php 
+if(isset($_POST['submit'])){
+
+}
 
 ?>
