@@ -48,7 +48,10 @@ include("./partials/footer.php")
 <!-- login to database -->
 <?php 
 if(isset($_POST['submit'])){
-
+    // echo "everything is ok";
+    // create var for store
+    $username =$_POST['username'];
+    $password =$_POST['password'];
 }
 
 ?>
