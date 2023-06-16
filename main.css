@@ -148,6 +148,21 @@ body .container_form .row .linkRegister a {
   text-decoration: none;
 }
 
+.succ {
+  padding: 10px 20px;
+  text-align: center;
+  background: var(--success_color);
+  color: var(--black_color);
+  margin-bottom: 1rem;
+}
+
+.fail {
+  position: relative;
+  z-index: 1000;
+  color: var(--fail_color);
+  top: -8%;
+}
+
 @media screen and (min-width: 480px) {
   .dashboard h1 {
     font-size: 5rem;
