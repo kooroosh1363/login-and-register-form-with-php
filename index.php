@@ -52,6 +52,32 @@ if(isset($_POST['submit'])){
     // create var for store
     $username =$_POST['username'];
     $password =$_POST['password'];
+
+
+    // write sql codes for details in db
+    $sql = "SELECT * from admin WHERE username='$username' AND password='$password'";
+    // query code for execute
+    $result=mysqli_query($conn,$sql);
+
+    // same count number of account in db
+    $count=mysqli_num_rows($result);
+    // everything is results in array
+    $row=mysqli_fetch_assoc($result);
+
+    // if for checking last account in db 
+    if($count ==1){
+        // sent a message for new account
+        $_SESSION['loginMessage']='<span class="succ">welcome'.$username.'</span>';
+        header('location:'.SITEURL.'dashboard.php');
+        exit();
+    }
+    else{
+        // sent a message if is not account in db
+        $_SESSION['notAdmin']='<span class="fail">welcome'.$username.'is not registered yet!</span>';
+        header('location:'.SITEURL.'index.php');
+        exit();
+
+    }
 }
 
 ?>
